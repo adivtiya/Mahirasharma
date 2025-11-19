@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Premium Gallery</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <h1>Premium — Unlock to View</h1>
+    <nav class="topnav">
+      <a href="index.html">Home</a>
+      <a href="gallery_auto.html">Gallery (Auto)</a>
+      <a href="gallery_locked.html">Premium Gallery</a>
+      <a href="pricing.html">Pricing</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <p class="note">Preview only. Watch ad(s) to unlock content.</p>
+
+  <div id="lockedGrid" class="grid"></div>
+
+  <div style="text-align:center;margin-top:20px;">
+    <button id="watchAdBtn" class="btn primary">Watch Ad - Unlock (simulate)</button>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container"><small>© YourBrand</small></div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+  loadLockedPreview();
+
+  document.getElementById('watchAdBtn').addEventListener('click', async () => {
+    // simulate ad: you can integrate real ad network here
+    const ok = confirm('Simulate watching ad? Click OK to unlock for this session.');
+    if(ok){
+      localStorage.setItem('unlockedPremium','1');
+      alert('Unlocked for this session. Reloading...');
+      loadLockedPremium();
+    }
+  });
+
+  // on load if unlocked:
+  if(localStorage.getItem('unlockedPremium')) loadLockedPremium();
+</script>
+</body>
+</html>
