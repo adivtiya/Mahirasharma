@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Contact</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header"><div class="container"><h1>Contact</h1></div></header>
+
+<main class="container">
+  <form id="contactForm" class="card">
+    <label>Name<input id="name" required></label>
+    <label>Message<textarea id="message" rows="4"></textarea></label>
+    <button class="btn primary" type="submit">Send</button>
+  </form>
+</main>
+
+<footer class="site-footer"><div class="container"><small>© YourBrand</small></div></footer>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', e=>{
+    e.preventDefault();
+    alert('Message submitted (demo). Implement email backend to receive messages.');
+  });
+</script>
+</body>
+</html>
