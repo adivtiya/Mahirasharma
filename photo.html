@@ -1,40 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            padding: 15px;
-        }
-        .gallery-grid img {
-            width: 100%;
-            border-radius: 8px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photos</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+        color: #fff;
+        font-family: Arial;
+        text-align: center;
+    }
+    h1 {
+        background: #ff2e7e;
+        padding: 15px;
+        margin: 0;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 15px;
+    }
+    .grid img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+</style>
 </head>
-
 <body>
-    <h1>Photos</h1>
 
-    <div id="gallery" class="gallery-grid"></div>
+<h1>Photos</h1>
 
-    <script>
-        fetch("gallery.json")
-          .then(response => response.json())
-          .then(data => {
-            let gallery = document.getElementById("gallery");
-            data.photos.forEach(photo => {
-              let img = document.createElement("img");
-              img.src = photo;
-              gallery.appendChild(img);
-            });
-          });
-    </script>
+<div class="grid" id="gallery"></div>
+
+<script>
+fetch("gallery.json")
+    .then(response => response.json())
+    .then(data => {
+        const gallery = document.getElementById("gallery");
+
+        data.photos.forEach(item => {
+            const img = document.createElement("img");
+            img.src = item;
+            gallery.appendChild(img);
+        });
+    });
+</script>
+
 </body>
 </html>
