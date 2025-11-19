@@ -1,9 +1,9 @@
 {
   "photos": [
-    "70a2364a-7fcc-4afa-9729-be2fd698519a.jpeg",
-    "example2.jpg"
+    "media/70a2364a-7fcc-4afa-9729-be2fd698519a.jpeg",
+    "media/example2.jpg"
   ],
   "videos": [
-    "sample1.mp4"
+    "media/sample1.mp4"
   ]
 }
