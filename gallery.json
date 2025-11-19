@@ -1,8 +1,14 @@
-{
-  "photos": [
-    "media/Screenshot_2025_1119_153938.png",
-    "media/Screenshot_2025_1119_154101.png",
-    "media/Screenshot_2025_1119_154128.png"
-  ],
-  "videos": []
-}
+[
+  {
+    "type": "image",
+    "url": "media/Screenshot_2025_1119_153932.png"
+  },
+  {
+    "type": "image",
+    "url": "media/Screenshot_2025_1119_154101.png"
+  },
+  {
+    "type": "image",
+    "url": "media/Screenshot_2025_1119_154528.png"
+  }
+]
