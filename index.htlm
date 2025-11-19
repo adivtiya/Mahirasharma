@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Girls Viral — Home</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <h1>Girls Viral</h1>
+    <nav class="topnav">
+      <a href="index.html">Home</a>
+      <a href="gallery_auto.html">Gallery (Auto)</a>
+      <a href="gallery_locked.html">Premium Gallery</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <img class="hero-img" src="assets/placeholder-profile.jpg" alt="profile" />
+    <h2>Hi, I'm CreatorName</h2>
+    <p class="sub">Subscribe to see my exclusive content</p>
+    <div class="cta-row">
+      <a class="btn primary" href="gallery_locked.html">Subscribe / Unlock</a>
+      <a class="btn" href="contact.html">Chat Now</a>
+    </div>
+  </section>
+
+  <section class="preview">
+    <h3>Latest Photos</h3>
+    <div id="previewGrid" class="grid"></div>
+    <p class="hint">Auto-loading from <code>/media</code> (update <code>gallery.json</code> to add files)</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <small>© YourBrand • Use responsibly</small>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
